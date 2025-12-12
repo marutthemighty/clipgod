@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: ClipGod AI API
+  version: 1.0.0
+paths:
+  /api/v1/generate:
+    post:
+      summary: Generate clips from URL
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                source_url: { type: string }
+      responses:
+        '200': { description: Job ID }
+  # ... Add all other endpoints similarly
+  
